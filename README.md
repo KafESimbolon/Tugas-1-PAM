@@ -1,1 +1,3 @@
-# Tugas-1-PAM
+# Kafindo Ebenov Simbolon
+# 120140198
+# RA
