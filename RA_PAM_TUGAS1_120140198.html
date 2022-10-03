@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RA_PAM_TUGAS1_120140198</title>
+   
+    <style type="text/css">	
+		div{
+			color: black;
+            background-color: white;
+			height: 653px;
+			width: 280px;
+            padding: 5px;
+			width: 100%;
+			border-collapse: collapse;
+			margin: 0 auto;
+            padding-top: 150px;
+		}
+		td,th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+		}
+		tr:nth-child(odd){
+			background-color: #dddddd;
+		}
+    </style>
+	
+    </head>
+    <body>
+        <div class="Baris1">
+            <table>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Nilai</th>
+                <th>Mutu</th>
+              </tr>
+            </table>
+        </div>
+        
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(function(){
+            var list = [
+                {
+                    "Nama": "Kaf",
+                    "NIM": 111,
+                    "Nilai": 70
+                },
+                {
+                    "Nama": "Fin",
+                    "NIM": 222,
+                    "Nilai": 75
+                },
+                {
+                    "Nama": "Do",
+                    "NIM": 333,
+                    "Nilai": 88
+                },
+                {
+                    "Nama": "Janur",
+                    "NIM": 123,
+                    "Nilai": 80
+                },
+                {
+                    "Nama": "Jani",
+                    "NIM": 321,
+                    "Nilai": 9
+                },
+                {
+                    "Nama": "Jack",
+                    "NIM": 212,
+                    "Nilai": 100
+                },
+                {
+                    "Nama": "Rizky",
+                    "NIM": 121,
+                    "Nilai": 60
+                },
+                {
+                    "Nama": "Riski",
+                    "NIM": 101,
+                    "Nilai": 50
+                },
+                {
+                    "Nama": "Reza",
+                    "NIM": 130,
+                    "Nilai": 30
+                },
+                {
+                    "Nama": "Raju",
+                    "NIM": 232,
+                    "Nilai": 45
+                },
+            ]
+
+        var tr;
+            var Mutu;
+            for (var i = 0; i < list.length; i++) {
+                if (i % 2 == 1){
+                    tr = $('<tr>');
+                } else{
+                    tr = $('<tr>');
+                }
+                tr.append('<td>' + (i + 1) + "</td>");
+                tr.append('<td>' + list[i].Nama + "</td>");
+                tr.append('<td>' + list[i].NIM + "</td>");
+                tr.append('<td>' + list[i].Nilai + "</td>");
+                if (list[i].Nilai >= 80) {
+                    Mutu = "A";
+                } else if (list[i].Nilai >= 70 && list[i].Nilai < 80) {
+                    Mutu = "AB";
+                } else if (list[i].Nilai >= 60 && list[i].Nilai < 70) {
+                    Mutu = "B";
+                } else if (list[i].Nilai >= 50 && list[i].Nilai < 60) {
+                    Mutu = "BC";
+                } else if (list[i].Nilai >= 40 && list[i].Nilai < 50) {
+                    Mutu = "C";
+                } else if (list[i].Nilai >= 10 && list[i].Nilai < 40) {
+                    Mutu = "D";
+                } else if (list[i].Nilai < 10) {
+                    Mutu = "E";
+                } else {
+                    Mutu = null;
+                }
+                tr.append(Mutu);
+                $('table').first().append(tr);
+            }
+
+        });
+    </script>
+    </body>    
+</html>
